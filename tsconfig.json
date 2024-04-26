@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "allowJs": true,
+    "declarationDir": "./typings",
+    "emitDeclarationOnly": true,
+    "declarationMap": true
+  },
+  "exclude": ["node_modules"]
+}
