@@ -70,10 +70,10 @@ export function WriteToDatabase(keys: string[], data: any, OverrideDatabaseName:
     }
 
     const databasePath = GetDatabasePath(OverrideDatabaseName, OverrideDatabaseLocation);
-    const allData = GetDatabaseData(keys, OverrideDatabaseName, OverrideDatabaseLocation); // Pass keys parameter
+    const allData = GetDatabaseData(keys, OverrideDatabaseName, OverrideDatabaseLocation) || {}; // Pass keys parameter
 
     // Traverse the keys array and access the nested object until the last key
-    let nestedObject = allData;
+    let nestedObject = allData || {};
     for (let i = 0; i < keys.length - 1; i++) {
         const key = keys[i];
         nestedObject[key] = nestedObject[key] || {};
