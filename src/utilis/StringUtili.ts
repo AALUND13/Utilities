@@ -4,5 +4,6 @@
  * @param {number} n - The maximum length of the truncated string.
  * @returns {string} - The truncated string.
  */
-export function truncateString(str: string, n: number): string;
-//# sourceMappingURL=StringUtili.d.ts.map
+export function truncateString(str, n) {
+    return (str.length > n) ? str.slice(0, n) + '...' : str;
+}

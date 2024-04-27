@@ -1,30 +1,30 @@
-const path = require('path');
-const fs = require('fs');
-const { utilities } = require('../utilities');
+import * as path from "path";
+import * as fs from "fs";
+import { Utilities } from "../utilities";
 
 /**
  * Retrieves the path to the database file.
- * @param {string|undefined} OverrideDatabaseName - The optional name of the database file.
- * @param {string|undefined} OverrideDatabaseLocation - The optional location of the database file.
+ * @param {string | undefined} OverrideDatabaseName - The optional name of the database file.
+ * @param {string | undefined} OverrideDatabaseLocation - The optional location of the database file.
  * @returns {string} The path to the database file.
  */
-function GetDatabasePath(OverrideDatabaseName = undefined, OverrideDatabaseLocation = undefined) {
-    var databaseName = OverrideDatabaseName || utilities.databaseName;
-    var databaseLocation = OverrideDatabaseLocation || utilities.databaseLocation;
+export function GetDatabasePath(OverrideDatabaseName:string | undefined = undefined, OverrideDatabaseLocation:string | undefined = undefined): string {
+    var databaseName = OverrideDatabaseName || Utilities._instance.getDataBaseName();
+    var databaseLocation = OverrideDatabaseLocation || Utilities._instance.getDataBaseLocation();
     return path.join(databaseLocation, `${databaseName}.json`);
 }
 
 /**
  * Retrieves data from the database.
  * @param {string[]} keys - The keys to traverse the nested data structure.
- * @param {string|undefined} OverrideDatabaseName - The optional name of the database file.
- * @param {string|undefined} OverrideDatabaseLocation - The optional location of the database file.
+ * @param {string | undefined} OverrideDatabaseName - The optional name of the database file.
+ * @param {string | undefined} OverrideDatabaseLocation - The optional location of the database file.
  * @returns {*} The retrieved data from the database.
  */
-function GetDatabaseData(keys = [], OverrideDatabaseName = undefined, OverrideDatabaseLocation = undefined) {
-    if (OverrideDatabaseName === undefined && utilities.databaseName === undefined) {
+export function GetDatabaseData(keys: string[] = [], OverrideDatabaseName:string | undefined = undefined, OverrideDatabaseLocation:string | undefined = undefined): any {
+    if (OverrideDatabaseName === undefined && Utilities._instance.getDataBaseName() === undefined) {
         throw new Error("No database name specified in the configuration.");
-    } else if (OverrideDatabaseLocation === undefined && utilities.databaseLocation === undefined) {
+    } else if (OverrideDatabaseLocation === undefined && Utilities._instance.getDataBaseLocation() === undefined) {
         throw new Error("No database location specified in the configuration.");
     }
 
@@ -59,13 +59,13 @@ function GetDatabaseData(keys = [], OverrideDatabaseName = undefined, OverrideDa
  * Writes data to the database.
  * @param {string[]} keys - The keys to traverse the nested data structure.
  * @param {*} data - The data to write to the database.
- * @param {string|undefined} OverrideDatabaseName - The optional name of the database file.
- * @param {string|undefined} OverrideDatabaseLocation - The optional location of the database file.
+ * @param {string | undefined} OverrideDatabaseName - The optional name of the database file.
+ * @param {string | undefined} OverrideDatabaseLocation - The optional location of the database file.
  */
-function WriteToDatabase(keys, data, OverrideDatabaseName = undefined, OverrideDatabaseLocation = undefined) {
-    if (OverrideDatabaseName === undefined && utilities.databaseName === undefined) {
+export function WriteToDatabase(keys: string[], data: any, OverrideDatabaseName:string | undefined = undefined, OverrideDatabaseLocation:string | undefined = undefined): void {
+    if (OverrideDatabaseName === undefined && Utilities._instance.getDataBaseName() === undefined) {
         throw new Error("No database name specified in the configuration.");
-    } else if (OverrideDatabaseLocation === undefined && utilities.databaseLocation === undefined) {
+    } else if (OverrideDatabaseLocation === undefined && Utilities._instance.getDataBaseLocation() === undefined) {
         throw new Error("No database location specified in the configuration.");
     }
 
@@ -88,8 +88,8 @@ function WriteToDatabase(keys, data, OverrideDatabaseName = undefined, OverrideD
     fs.writeFileSync(databasePath, JSON.stringify(allData, undefined, 2));
 }
 
-module.exports = {
+export default {
     GetDatabasePath,
     GetDatabaseData,
     WriteToDatabase
-};
+}

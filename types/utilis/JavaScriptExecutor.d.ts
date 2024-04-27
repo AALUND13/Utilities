@@ -1,3 +1,4 @@
+/// <reference types="node" />
 /**
  * Executes JavaScript code and captures console output and errors.
  * @param {string | Function} code - The JavaScript code to execute.
@@ -6,7 +7,7 @@
  * @param {number} [cutoff=Infinity] - The maximum length of console output to capture.
  * @returns {Promise<{returnValue: any, consoleOutput: string, error: string | undefined}>} - An object containing the return value, console output, and error message (if any).
  */
-export function executeJavaScript(code: string | Function, args?: any, requireFn?: NodeRequire, cutoff?: number): Promise<{
+export declare function executeJavaScript(code: string | Function, args: Object, requireFn: NodeRequire, cutoff?: number): Promise<{
     returnValue: any;
     consoleOutput: string;
     error: string | undefined;

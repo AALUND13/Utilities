@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    
     "declaration": true,
-    "allowJs": true,
-    "declarationDir": "./typings",
-    "emitDeclarationOnly": true,
-    "declarationMap": true
+    "declarationDir": "./types",
+    "declarationMap": true,
+
+    "outDir": "dist"
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "include": ["src"]
 }
