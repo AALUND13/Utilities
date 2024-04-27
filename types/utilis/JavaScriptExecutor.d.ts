@@ -12,4 +12,3 @@ export declare function executeJavaScript(code: string | Function, args: Object,
     consoleOutput: string;
     error: string | undefined;
 }>;
-//# sourceMappingURL=JavaScriptExecutor.d.ts.map

@@ -15,4 +15,3 @@ export interface IUtilitiesOptions {
      */
     debug: boolean;
 }
-//# sourceMappingURL=typings.d.ts.map

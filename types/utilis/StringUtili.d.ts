@@ -5,4 +5,3 @@
  * @returns {string} - The truncated string.
  */
 export declare function truncateString(str: any, n: any): any;
-//# sourceMappingURL=StringUtili.d.ts.map

@@ -2,8 +2,8 @@
   "name": "utilities",
   "version": "1.0.0",
   "description": "A collection of utility functions to ease your coding workflow.",
-  "main": "dist/index.js",
-  "types": "types/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./types/index.d.ts",
   "exports": {
     ".": {
       "types": "./types/index.d.ts",

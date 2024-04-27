@@ -27,4 +27,3 @@ declare const _default: {
     WriteToDatabase: typeof WriteToDatabase;
 };
 export default _default;
-//# sourceMappingURL=LocalDatabase.d.ts.map

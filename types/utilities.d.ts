@@ -22,4 +22,3 @@ export declare class Utilities {
      */
     getDataBaseLocation(): string;
 }
-//# sourceMappingURL=utilities.d.ts.map
