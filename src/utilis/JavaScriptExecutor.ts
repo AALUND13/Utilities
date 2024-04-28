@@ -10,7 +10,7 @@ const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor;
  * @param {number} [cutoff=Infinity] - The maximum length of console output to capture.
  * @returns {Promise<{returnValue: any, consoleOutput: string, error: string | undefined}>} - An object containing the return value, console output, and error message (if any).
  */
-export async function executeJavaScript(code: string | Function, args:Object = {}, requireFn:NodeRequire, cutoff:number = Infinity): Promise<{returnValue: any, consoleOutput: string, error: string | undefined}> {
+export async function executeJavaScript(code: string | Function, args:Object = {}, requireFn:NodeRequire, cutoff:number = Infinity): Promise<{returnValue: any, consoleOutput: string, error: string}> {
     let consoleOutput = "";
 
     const originalConsoleLog = console.log;

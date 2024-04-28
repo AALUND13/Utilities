@@ -10,5 +10,5 @@
 export declare function executeJavaScript(code: string | Function, args: Object, requireFn: NodeRequire, cutoff?: number): Promise<{
     returnValue: any;
     consoleOutput: string;
-    error: string | undefined;
+    error: string;
 }>;
