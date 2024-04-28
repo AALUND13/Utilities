@@ -10,8 +10,4 @@ export interface IUtilitiesOptions {
      * The location of the database
      */
     databaseLocation: string;
-    /**
-     * Whether debug mode is enabled or not
-     */
-    debug: boolean;
 }

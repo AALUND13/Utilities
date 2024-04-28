@@ -1,4 +1,4 @@
-import { IUtilitiesOptions } from "./typings";
+import type { IUtilitiesOptions } from "./typings";
 /**
  * A utility class for managing options.
  */
