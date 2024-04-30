@@ -4,16 +4,20 @@
   "description": "A collection of utility functions to ease your coding workflow.",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
+  "scripts": {
+    "test1": "node .\\dist\\tests\\JavaScriptExecutionHandlerTest",
+    "test2": "node .\\dist\\tests\\LocalDatabaseTest"
+  },
   "exports": {
     ".": {
       "types": "./types/index.d.ts",
       "require": "./dist/index.js"
     }
   },
-  "scripts": {},
   "author": "AALUND13",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.12.7"
-  }
+  },
+  "dependencies": {}
 }
