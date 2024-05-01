@@ -121,7 +121,8 @@ export class JavaScriptExecutor {
         if (callback!== undefined) {
             clearInterval(interval);
         }
-
+        this.isRunning = false
+        
         // Put the original console log back
         console.log = JavaScriptExecutor.originalConsoleLog;
 
