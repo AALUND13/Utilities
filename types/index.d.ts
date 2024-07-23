@@ -3,4 +3,5 @@ export * from './utilis/LocalDatabase';
 export * from './utilis/StringUtili';
 export * from './utilis/JavaScriptExecutor';
 export * from './handler/JavaScriptExecutionHandler';
-export type * from './typings';
+export { Logger } from './utilis/Logger';
+export * from './typings';

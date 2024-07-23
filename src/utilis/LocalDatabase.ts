@@ -12,7 +12,7 @@ import { IFindInDatabaseResult } from "../typings";
 export function getDatabasePath(OverrideDatabaseName?: string, OverrideDatabaseLocation?: string): string {
     var databaseName = OverrideDatabaseName || Utilities._instance.getDataBaseName();
     var databaseLocation = OverrideDatabaseLocation || Utilities._instance.getDataBaseLocation();
-    return path.join(databaseLocation, `${databaseName}.jaon`);
+    return path.join(databaseLocation, `${databaseName}.json`);
 }
 
 /**
@@ -20,7 +20,7 @@ export function getDatabasePath(OverrideDatabaseName?: string, OverrideDatabaseL
  * @param {string[]} keys - The keys to traverse the nested data structure.
  * @param {string | undefined} OverrideDatabaseName - The optional name of the database file.
  * @param {string | undefined} OverrideDatabaseLocation - The optional location of the database file.
- * @returns {*} The retrieved data from the database.
+ * @returns {*} The retrieved data from the database, or `undefined` if the data does not exist.
  */
 export function getDatabaseData(keys: (string | number)[] = [], OverrideDatabaseName?: string, OverrideDatabaseLocation?: string): any {
     if (OverrideDatabaseName === undefined && Utilities._instance.getDataBaseName() === undefined) {

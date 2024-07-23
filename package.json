@@ -6,7 +6,8 @@
   "types": "./types/index.d.ts",
   "scripts": {
     "test1": "node .\\dist\\tests\\JavaScriptExecutionHandlerTest",
-    "test2": "node .\\dist\\tests\\LocalDatabaseTest"
+    "test2": "node .\\dist\\tests\\LocalDatabaseTest",
+    "test": "jest"
   },
   "exports": {
     ".": {
@@ -17,7 +18,9 @@
   "author": "AALUND13",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.12.7"
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.7",
+    "jest": "^29.7.0"
   },
   "dependencies": {}
 }

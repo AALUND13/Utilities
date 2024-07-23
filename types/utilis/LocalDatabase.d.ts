@@ -11,7 +11,7 @@ export declare function getDatabasePath(OverrideDatabaseName?: string, OverrideD
  * @param {string[]} keys - The keys to traverse the nested data structure.
  * @param {string | undefined} OverrideDatabaseName - The optional name of the database file.
  * @param {string | undefined} OverrideDatabaseLocation - The optional location of the database file.
- * @returns {*} The retrieved data from the database.
+ * @returns {*} The retrieved data from the database, or `undefined` if the data does not exist.
  */
 export declare function getDatabaseData(keys?: (string | number)[], OverrideDatabaseName?: string, OverrideDatabaseLocation?: string): any;
 /**
