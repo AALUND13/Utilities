@@ -5,8 +5,7 @@
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
   "scripts": {
-    "test1": "node .\\dist\\tests\\JavaScriptExecutionHandlerTest",
-    "test2": "node .\\dist\\tests\\LocalDatabaseTest",
+    "build": "tsc",
     "test": "jest"
   },
   "exports": {
