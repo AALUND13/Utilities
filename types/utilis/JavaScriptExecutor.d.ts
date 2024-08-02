@@ -1,4 +1,3 @@
-/// <reference types="node" />
 /**
  * Executes JavaScript code and captures console output and errors.
  * @deprecated This function is deprecated. Use JavaScriptExecutionHandler instead.

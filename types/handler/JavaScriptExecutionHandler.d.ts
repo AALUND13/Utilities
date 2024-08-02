@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import type { ICheckIfPermittedRequireResult, IJavaScriptExecutorState } from '../typings';
 /**
 * Represents a JavaScript executor that can run arbitrary JavaScript code with optional callback functionality.
